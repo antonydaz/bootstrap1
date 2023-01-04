@@ -1,0 +1,56 @@
+/*
+<576PX  XS
+<=576PX SM
+<=768PX MD
+<=992PX LG
+<=1200PX XL
+<=1400PX XXL
+
+###bootstrap grid system
+1.  1. container
+    2. container-fluid
+    3.container-xxl
+    container-xl
+    container-lg
+     container-md
+    container-sm
+    container-xs
+*/
+
+
+body{
+    margin: top 50px;
+}
+body::before{
+    content:'xs';
+    color:orangered;
+    font-size: 30px;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+@media(min-width:576px){
+    body::before{
+        content:"SM";
+    }
+}
+@media(min-width:768px){
+    body::before{
+        content:"MD";
+    }
+}
+@media(min-width:992px){
+    body::before{
+        content:"LG";
+    }
+}
+@media(min-width:1200px){
+    body::before{
+        content:"XL";
+    }
+}
+@media(min-width:1400px){
+    body::before{
+        content:"XXL";
+    }
+}
